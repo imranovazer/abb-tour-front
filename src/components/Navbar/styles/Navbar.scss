@@ -1,0 +1,60 @@
+.navbar-ul {
+  // position: relative;
+  a {
+    @apply font-bold  transition-all dark:text-white;
+  }
+  a:hover {
+    @apply hover:text-sky-600;
+  }
+  a.active {
+    @apply text-sky-600;
+    position: relative;
+    text-align: center;
+  }
+  a.active::after {
+    content: " \2022 \2022 \2022"; /* Three dots represented by Unicode characters */
+    @apply text-sky-600;
+    position: absolute;
+    bottom: -13px; /* Adjust this value to position the dots properly */
+    left: 2px;
+    right: 0;
+    letter-spacing: 7px;
+    margin: 0 auto;
+    /* Adjust the size of the dots as needed */
+  }
+}
+// .navbar-ul li::before {
+//   content: "";
+//   height: 1px;
+//   width: 0;
+//   position: absolute;
+//   bottom: 0;
+//   transition: 0.3s;
+//   -webkit-transition: 0.3s;
+//   -moz-transition: 0.3s;
+//   -ms-transition: 0.3s;
+//   -o-transition: 0.3s;
+// }
+
+// .navbar-ul li:hover::before {
+//   width: 100%;
+//   border: 1px dashed #33cdcd;
+//   transition: 0.3s;
+//   -webkit-transition: 0.3s;
+//   -moz-transition: 0.3s;
+//   -ms-transition: 0.3s;
+//   -o-transition: 0.3s;
+// }
+
+.drop-down {
+  @apply transition-all;
+  li {
+    @apply items-center flex gap-2 p-2 cursor-pointer text-[20px] text-sky-600;
+    &:hover {
+      @apply bg-slate-100 dark:bg-slate-950;
+    }
+    p {
+      @apply text-[13px] dark:text-white text-black;
+    }
+  }
+}
